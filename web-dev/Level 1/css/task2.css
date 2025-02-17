@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: bisque;
+}
+h2 {
+  text-align: center;
+}
+.color-change,
+.greet {
+  border: none;
+  padding: 0.5rem;
+  background-color: chocolate;
+  color: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 1rem auto;
+  display: block;
+}
+.greet {
+  background-color: cadetblue;
+}
+.color-change:focus-visible,
+.greet:focus-visible {
+  outline: none;
+}
+.alert {
+  z-index: 10;
+  background-color: chartreuse;
+  color: white;
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 30%;
+  margin: 0 auto;
+  position: absolute;
+  top: -2.5rem;
+  left: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.sum,
+.reset {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background-color: rgb(38, 190, 38);
+  cursor: pointer;
+}
+.reset {
+  background-color: rgb(247, 34, 34);
+}
+.sum:focus-visible,
+.reset:focus-visible {
+  outline: none;
+}
+.calculator input {
+  background-color: whitesmoke;
+  padding: 0.5rem;
+  border: 1px solid black;
+  text-align: center;
+  width: 3rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator input:focus-visible {
+  outline: none;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
