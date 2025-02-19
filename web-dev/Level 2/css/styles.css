@@ -110,3 +110,22 @@ label {
     display: block;
   }
 }
+main{
+  padding: 1rem;
+}
+main > p{
+  margin-top: 0.5rem;
+  color: rgb(24, 17, 17);
+  font-style: italic;
+}
+main > img {
+  display: block;
+  width: 65%;
+  margin: 1rem auto;
+  border-radius: 10px;
+}
+main > div{
+  width: 75%;
+  margin: 1rem auto;
+  text-align: justify;
+}
