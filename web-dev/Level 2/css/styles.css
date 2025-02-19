@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: darkgrey;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.25rem;
+  border: 1px solid white;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+.navbar .logo img {
+  height: 3rem;
+}
+.navbar_desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+}
+.navbar_desktop a,
+.navbar_mobile a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1rem;
+  transition: all 300ms ease-in-out;
+}
+.navbar_desktop a:hover,
+.navbar_mobile a:hover {
+  filter: drop-shadow(1px 1px whitesmoke);
+  color: lightgrey;
+  transform: scale(1.1);
+}
+.logo {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  font-weight: 600;
+}
+label {
+  display: none;
+  height: 50%;
+}
+.menu_open,
+.menu_close {
+  display: none;
+  cursor: pointer;
+  background-color: whitesmoke;
+  padding: 2px 4px;
+  border-radius: 0.25rem;
+  height: 100%;
+  transition: all 300ms ease-in-out;
+}
+.menu_open:hover,
+.menu_close:hover {
+  background-color: lightgrey;
+  transform: scale(1.1);
+}
+.navbar_mobile {
+  position: sticky;
+  top: 4.25rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  background-color: black;
+}
+.navbar_mobile a {
+  padding: 1rem;
+}
+#menu {
+  display: none;
+}
+@media screen and (max-width: 560px) {
+  .navbar_desktop {
+    display: none;
+  }
+  label {
+    display: block;
+  }
+  .menu_open {
+    display: block;
+  }
+  .menu_close {
+    display: none;
+  }
+  #menu:checked ~ .navbar_mobile {
+    display: flex;
+  }
+  #menu:checked + .navbar .menu_open {
+    display: none;
+  }
+  #menu:checked + .navbar .menu_close {
+    display: block;
+  }
+}
