@@ -125,7 +125,55 @@ main > img {
   border-radius: 10px;
 }
 main > div{
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+main > div >img{
+  border-radius: 1rem;
+  transition: all 300ms ease-in-out;
+  width: 50%;
+}
+main > div >img:hover{
+  transform: scale(1.01);
+}
+main > div>p{
+  text-align: justify;
+  width: 40%;
+  line-height: 2rem;
+  font-weight: 600;
+}
+main > section > h3{
+  text-align: center;
+}
+main > section > img{
+  display: block;
   width: 75%;
   margin: 1rem auto;
+}
+main > section >p{
   text-align: justify;
+  width: 50%;
+  margin: auto;
+  line-height: 2rem;
+}
+@media screen and (max-width: 560px) {
+  main > div{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main > div >img{
+    width: 100%;
+  }
+  main > div >p{
+    width: 100%;
+    line-height: 1.5rem;
+  }
+  main > section >p{
+    width: 100%;
+    line-height: 1.5rem;
+  }
 }
